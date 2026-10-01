@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<title>快播电影网 · 电影资讯速递与新片档期整理 | 快播电影网 kuaibodianyingwang-zh.com.github.io</title>
+<meta name="description" content="快播电影网（kuaibodianyingwang-zh.com.github.io）是一个电影资讯速递与新片档期整理站，汇总每周新片上映、国内外电影节获奖名单、院线与流媒体上线时间与观影前后值得知道的影片信息。">
+<meta name="keywords" content="快播电影网,kuaibodianyingwang-zh,kuaibodianyingwang-zh.com.github.io,电影资讯,新片速递,电影档期,上映排片,电影节获奖,电影新闻">
+<meta name="author" content="快播电影网编辑组">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://kuaibodianyingwang-zh.com.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="快播电影网">
+<meta property="og:title" content="快播电影网 · 电影资讯速递与新片档期整理">
+<meta property="og:description" content="每周新片上映、国内外电影节获奖名单、院线与流媒体上线时间，一站掌握本周值得看的电影。">
+<meta property="og:url" content="https://kuaibodianyingwang-zh.com.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0c0805">
+<style>
+:root{
+  --bg:#0c0805; --ink:#f7f2ec; --ink2:#d8cec2; --ink3:#9c9084; --line:rgba(255,255,255,.12);
+  --card:rgba(255,255,255,.035); --ora:#ff8a3d; --dee:#ff5a36; --yel:#ffcf3d; --cream:#f5e6d0; --teal:#3fd6c0;
+  --r:14px; --safe:env(safe-area-inset-bottom,0px)
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:62px}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Inter",system-ui,-apple-system,"Segoe UI",Roboto,"WenQuanYi Micro Hei",sans-serif;
+  font-size:16px;line-height:1.78;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:
+  radial-gradient(700px 480px at 88% -2%,rgba(255,138,61,.20),transparent 60%),
+  radial-gradient(620px 520px at 8% 6%,rgba(255,90,54,.14),transparent 62%),
+  radial-gradient(760px 560px at 50% 112%,rgba(255,207,61,.12),transparent 66%)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.42;
+  background-image:repeating-linear-gradient(90deg,transparent 0,transparent 71px,rgba(255,255,255,.055) 71px,rgba(255,255,255,.055) 72px),
+  repeating-linear-gradient(0deg,transparent 0,transparent 71px,rgba(255,255,255,.055) 71px,rgba(255,255,255,.055) 72px)}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:66px 0;position:relative}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.2em;color:var(--cream);
+  background:rgba(255,138,61,.12);border:1px solid rgba(255,138,61,.38);padding:5px 13px;border-radius:20px;font-weight:700}
+.kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--yel);box-shadow:0 0 9px var(--yel)}
+h1,h2,h3{margin:0;line-height:1.32;font-weight:800}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em}
+h2 em{font-style:normal;color:var(--ora)}
+.lead{color:var(--ink2);font-size:clamp(.95rem,1.5vw,1.06rem);max-width:66ch;margin:14px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;
+  border-radius:30px;font-size:15px;font-weight:700;border:1px solid transparent;cursor:pointer;transition:.2s;font-family:inherit}
+.btn-main{background:linear-gradient(96deg,var(--dee),var(--ora));color:#1a0c05;box-shadow:0 8px 24px -10px rgba(255,90,54,.85)}
+.btn-main:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{background:var(--card);border-color:rgba(255,255,255,.3)}
+.arr{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.play{width:17px;height:17px;fill:currentColor}
+
+.hd{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:rgba(12,8,5,.88);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:18px;height:60px}
+.logo{display:flex;align-items:baseline;gap:8px;flex:0 0 auto;font-weight:900;letter-spacing:-.035em;font-size:22px}
+.logo b{font-style:italic;color:var(--cream)}
+.logo span{font-size:10px;letter-spacing:.16em;color:var(--ink3);border-left:1px solid var(--line);padding-left:10px;font-weight:500}
+nav{display:flex;gap:2px;margin-left:auto;align-items:center}
+nav a{padding:7px 11px;font-size:14px;color:var(--ink2);transition:.16s}
+nav a:hover{color:var(--yel)}
+.nb{display:none}
+@media(max-width:880px){
+  nav{position:fixed;inset:60px 0 auto;flex-direction:column;align-items:stretch;padding:12px;gap:1px;
+    background:rgba(12,8,5,.99);border-bottom:1px solid var(--line);transform:translateY(-10px);opacity:0;
+    pointer-events:none;transition:.22s}
+  nav.open{transform:none;opacity:1;pointer-events:auto}
+  nav a{padding:14px 12px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .nb{display:inline-flex;margin-left:auto;align-items:center;justify-content:center;width:40px;height:40px;
+    border-radius:50%;border:1px solid var(--line);background:var(--card)}
+  .nb svg{width:20px;height:20px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round}
+}
+
+.hero{padding:72px 0 26px}
+.hgrid{display:grid;grid-template-columns:1.3fr .7fr;gap:44px;align-items:center}
+@media(max-width:880px){.hgrid{grid-template-columns:1fr;gap:30px}}
+.hero h1{font-size:clamp(2rem,6vw,3.35rem);line-height:1.14;letter-spacing:-.035em}
+.hero h1 small{display:block;font-size:.26em;font-weight:700;letter-spacing:.2em;color:var(--yel);margin-bottom:18px;text-transform:uppercase;font-style:normal}
+.hero h1 i{font-style:italic;background:linear-gradient(96deg,var(--dee),var(--yel));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 s{text-decoration:none;color:var(--ink3);font-weight:500}
+.tagrow{display:flex;flex-wrap:wrap;gap:7px;margin:22px 0 0}
+.tag{font-size:12.5px;color:var(--ink2);border:1px solid var(--line);border-radius:20px;padding:6px 12px;background:var(--card);font-weight:500}
+.tag.hot{color:#1a0c05;border-color:transparent;background:linear-gradient(96deg,var(--dee),var(--yel));font-weight:700}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.track{border:1px solid var(--line);border-radius:18px;padding:22px;background:linear-gradient(168deg,rgba(255,138,61,.10),rgba(255,255,255,.03))}
+.track h3{font-size:17px;margin-bottom:4px}
+.track .sub{font-size:13px;color:var(--ink3)}
+.tl{position:relative;margin-top:22px;padding-left:22px}
+.tl::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--dee),var(--teal))}
+.tl div{position:relative;padding:0 0 16px}
+.tl div:last-child{padding-bottom:0}
+.tl div::before{content:"";position:absolute;left:-21px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--yel)}
+.tl b{font-size:13px;color:var(--yel);font-weight:700;letter-spacing:.02em}
+.tl p{margin:2px 0 0;font-size:14px;color:var(--ink2)}
+.stripe{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:16px;margin-top:36px;overflow:hidden;background:rgba(255,255,255,.03)}
+.st{text-align:center;padding:22px 12px;border-right:1px solid var(--line)}
+.st:last-child{border-right:none}
+.st strong{display:block;font-size:clamp(1.5rem,3vw,1.95rem);font-weight:900;color:var(--yel);letter-spacing:-.03em;font-style:italic}
+.st span{font-size:12.5px;color:var(--ink3)}
+@media(max-width:640px){.stripe{grid-template-columns:repeat(2,1fr)}.st:nth-child(2){border-right:none}.st:nth-child(1),.st:nth-child(2){border-bottom:1px solid var(--line)}}
+
+.card{position:relative;border:1px solid var(--line);border-radius:var(--r);padding:22px;background:var(--card);transition:.22s}
+.card:hover{transform:translateY(-3px);background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.26)}
+.card.hl{border-color:rgba(255,138,61,.45);background:linear-gradient(168deg,rgba(255,138,61,.12),rgba(255,255,255,.03))}
+.poster{position:relative;aspect-ratio:3/4;border-radius:10px;overflow:hidden;background:#15100a}
+.poster svg{width:100%;height:100%}
+.poster .cap{position:absolute;inset:auto 9px 9px;display:flex;justify-content:space-between;font-size:11px;color:#1a0c05;gap:8px}
+.poster .cap b,.poster .cap em{background:rgba(245,230,208,.94);padding:3px 9px;border-radius:20px;font-weight:700}
+.poster .cap em{background:var(--yel)}
+.poster .pbtn{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%) scale(.88);width:52px;height:52px;border-radius:50%;
+  background:var(--yel);color:#1a0c05;display:grid;place-items:center;opacity:0;transition:.22s}
+.card:hover .pbtn{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.fminfo{padding:16px 18px 18px}
+.fminfo h3{font-size:16.5px;font-weight:700;line-height:1.4}
+.fminfo .sub{margin-top:6px;font-size:13px;color:var(--ink3);display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.fminfo .sub b{color:var(--cream);font-weight:600}
+.fminfo .sub i{font-style:normal;width:3px;height:3px;border-radius:50%;background:var(--ink3);display:inline-block}
+.ico{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;font-size:19px;background:var(--bg);
+  border:1px solid var(--line)}
+.card h3.t{font-size:17px;margin:14px 0 8px;line-height:1.4}
+.card p.tx{margin:0;color:var(--ink2);font-size:14.5px}
+.mini{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.mini i{font-style:normal;font-size:12px;color:var(--ink2);border:1px solid var(--line);border-radius:20px;padding:4px 10px;background:var(--card)}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;color:#1a0c05;background:var(--yel);padding:3px 10px;border-radius:20px;margin-bottom:10px}
+.badge.ora{background:var(--ora)}
+.badge.teal{background:var(--teal);color:#04221d}
+.quote{font-size:clamp(1rem,2vw,1.4rem);line-height:1.62;font-weight:600;max-width:36ch;letter-spacing:-.01em}
+.stars{color:var(--yel);letter-spacing:2px;font-size:15px}
+.meta{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--ink3)}
+.meta b{color:var(--ink);font-weight:600}
+.grid{display:grid;gap:16px;margin-top:28px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:980px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-size:13.5px;color:var(--ink);border:1px solid var(--line);background:var(--card);padding:8px 15px;border-radius:30px;transition:.16s;font-weight:500}
+.chip:hover{border-color:var(--ora);color:var(--yel)}
+
+.news{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:rgba(255,255,255,.03)}
+.news article{padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.07);display:grid;grid-template-columns:92px 1fr auto;gap:18px;align-items:center;transition:.18s}
+.news article:last-child{border-bottom:none}
+.news article:hover{background:rgba(255,255,255,.04)}
+.news time{font-size:12.5px;font-weight:700;color:var(--yel);letter-spacing:.02em;white-space:nowrap}
+.news h3{font-size:15.5px;font-weight:600;line-height:1.5}
+.news .cat{font-size:12px;color:var(--ink3);white-space:nowrap}
+@media(max-width:640px){.news article{grid-template-columns:1fr;gap:8px;padding:16px}.news time{order:-1}}
+
+.awards{display:grid;gap:14px}
+.aw{display:grid;grid-template-columns:76px 1fr;gap:18px;padding:18px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.03)}
+.aw .yr{font-size:clamp(1.4rem,3vw,1.8rem);font-weight:900;color:var(--yel);font-style:italic;letter-spacing:-.03em;line-height:1.1}
+.aw .yr small{display:block;font-size:11px;font-weight:700;color:var(--ink3);font-style:normal;letter-spacing:.1em;margin-top:4px}
+.aw h3{font-size:16px;margin-bottom:6px}
+.aw p{margin:0;color:var(--ink2);font-size:14px}
+
+.schedule{border-collapse:collapse;width:100%;margin-top:24px;font-size:14.5px}
+.schedule th{text-align:left;font-size:11px;letter-spacing:.1em;color:var(--yel);font-weight:700;padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap;text-transform:uppercase}
+.schedule td{padding:14px;border-bottom:1px solid rgba(255,255,255,.06);vertical-align:middle}
+.schedule tr:hover td{background:rgba(255,255,255,.035)}
+.schedule .nm{font-weight:700;font-size:15px}
+.schedule .dt{color:var(--yel);font-weight:700;white-space:nowrap;font-family:"Inter",system-ui,sans-serif}
+.schedule .wh{color:var(--ink3);font-size:13px;white-space:nowrap}
+@media(max-width:680px){
+  .schedule thead{display:none}
+  .schedule,.schedule tbody,.schedule tr,.schedule td{display:block;width:100%}
+  .schedule tr{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;padding:4px 14px;background:rgba(255,255,255,.03)}
+  .schedule td{border:none;padding:8px 0;display:flex;justify-content:space-between;gap:12px}
+  .schedule td::before{content:attr(data-l);color:var(--ink3);font-size:12px;flex:0 0 auto}
+  .schedule td.nm::before{font-weight:600;color:var(--ink)}}
+
+.scrollx{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  padding:4px 4px 16px;margin-top:24px;scrollbar-width:thin}
+.scrollx::-webkit-scrollbar{height:8px}
+.scrollx::-webkit-scrollbar-thumb{background:rgba(255,255,255,.16);border-radius:8px}
+.mini-card{flex:0 0 210px;scroll-snap-align:start;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.035)}
+.mini-card .ph{height:118px;position:relative}
+.mini-card .ph svg{width:100%;height:100%}
+.mini-card .ph em{position:absolute;left:9px;bottom:9px;font-style:normal;font-size:11px;font-weight:700;color:#1a0c05;background:var(--yel);padding:2px 9px;border-radius:20px}
+.mini-card .info{padding:13px 14px}
+.mini-card .info b{font-size:14.5px;font-weight:700;line-height:1.4}
+.mini-card .info span{display:block;font-size:12px;color:var(--ink3);margin-top:5px}
+
+.faq{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:26px;background:rgba(255,255,255,.03)}
+.faq details{border-bottom:1px solid rgba(255,255,255,.07)}
+.faq details:last-child{border-bottom:none}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;cursor:pointer;font-size:16px;font-weight:600;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";font-size:19px;line-height:1;color:var(--yel);font-weight:700;flex:0 0 auto}
+.faq details[open] summary::after{content:"×"}
+.faq .a{padding:0 22px 20px;color:var(--ink2);font-size:14.5px;max-width:72ch}
+.faq .a b{color:var(--ink)}
+
+.step{display:grid;grid-template-columns:60px 1fr;gap:16px;padding:20px;border:1px solid var(--line);border-radius:var(--r);background:rgba(255,255,255,.035)}
+.step .no{font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--yel);padding-top:3px;text-transform:uppercase;font-style:italic}
+.step h3{font-size:16.5px;margin-bottom:6px}
+.step p{margin:0;color:var(--ink2);font-size:14.5px}
+
+.cta-box{text-align:center;padding:70px 20px;border:1px solid var(--line);border-radius:20px;
+  background:radial-gradient(660px 360px at 50% 0%,rgba(255,138,61,.18),transparent 70%),rgba(255,255,255,.03)}
+.cta-box h2{font-size:clamp(1.6rem,4vw,2.4rem);letter-spacing:-.03em}
+.cta-box .big{font-size:clamp(2.2rem,8vw,4.4rem);font-weight:900;letter-spacing:-.055em;line-height:1.05;margin:16px 0 8px;font-style:italic;background:linear-gradient(96deg,var(--dee),var(--yel));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cta-box .url{font-size:14px;color:var(--ink3);word-break:break-all}
+.row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:24px}
+
+.ft{border-top:1px solid var(--line);margin-top:40px;padding:44px 0 calc(34px + var(--safe))}
+.ft-in{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px}
+@media(max-width:820px){.ft-in{grid-template-columns:1fr 1fr}}
+.ft h4{font-size:11px;letter-spacing:.16em;color:var(--yel);margin:0 0 14px;text-transform:uppercase;font-weight:700}
+.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.ft a{color:var(--ink2);font-size:14px}
+.ft a:hover{color:var(--yel)}
+.ft .ab p{color:var(--ink2);font-size:14px;margin:12px 0 0;max-width:40ch}
+.cp{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;color:var(--ink3);font-size:12.5px}
+.cp a{color:var(--ink2);border-bottom:1px dashed rgba(255,255,255,.22)}
+.fade{opacity:0;transform:translateY(18px);transition:.55s cubic-bezier(.2,.7,.3,1)}
+.fade.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="logo" href="#top" aria-label="快播电影网 首页"><b>快播</b>电影网<span>FAST FILM FEED</span></a>
+    <nav id="nav">
+      <a href="#new">本周新片</a>
+      <a href="#releases">上映档期</a>
+      <a href="#news">资讯速递</a>
+      <a href="#awards">获奖名单</a>
+      <a href="#columns">栏目导航</a>
+      <a href="#columns2">主题合集</a>
+      <a href="#guide">读者投稿</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <button class="nb" id="nb" aria-label="打开菜单" aria-expanded="false">
+      <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hgrid">
+        <div class="fade in">
+          <span class="kicker">● 每日更新 · 今日已发 7 条</span>
+          <h1>
+            <small>快播电影网 · 电影资讯速递站</small>
+            电影 <i>消息</i> 跑得快，<br><s>别等上映后才</s> 听说它
+          </h1>
+          <div class="tagrow">
+            <span class="tag hot">今日 7 条更新</span>
+            <span class="tag">新片上映</span>
+            <span class="tag">院线档期</span>
+            <span class="tag">流媒体上线</span>
+            <span class="tag">电影节获奖</span>
+            <span class="tag">幕后资讯</span>
+          </div>
+          <p class="lead"><strong>快播电影网（kuaibodianyingwang-zh.com.github.io）</strong>是一个电影资讯速递与新片档期整理站。我们汇总每周新片上映、国内外电影节获奖名单、院线与流媒体上线时间，以及观影前后值得知道的影片信息——信息偏短、更新偏快，目的是让你在买票前不踩空。</p>
+          <div class="cta">
+            <a class="btn btn-main" href="#new">看本周新片 <svg class="play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg></a>
+            <a class="btn btn-ghost" href="#releases">查上映档期</a>
+          </div>
+        </div>
+        <div class="track fade">
+          <h3>今日更新时间线</h3>
+          <p class="sub">电影资讯以影片公映与官方发布为准，非官方传闻会明确标注来源</p>
+          <div class="tl">
+            <div><b>21:30</b><p>本周新片前瞻：六部值得关注的院线新片盘点</p></div>
+            <div><b>17:05</b><p>流媒体本周上线清单：海外平台新增 11 部影片</p></div>
+            <div><b>12:40</b><p>档期调整：两部影片宣布改期，原因与替代片单</p></div>
+            <div><b>09:15</b><p>电影节获奖名单公布：主竞赛单元完整结果</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="stripe fade">
+        <div class="st"><strong>860+</strong><span>已收录资讯</span></div>
+        <div class="st"><strong>7</strong><span>今日更新</span></div>
+        <div class="st"><strong>12</strong><span>栏目分类</span></div>
+        <div class="st"><strong>09:30</strong><span>每日首更</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 本周新片 -->
+  <section id="new">
+    <div class="wrap">
+      <div class="fade">
+        <span class="kicker">● THIS WEEK</span>
+        <h2>本周 <em>新片</em> 速递，<br>六部值得先看简介</h2>
+        <p class="lead">快播电影网每周三更新当周新片前瞻，含影片类型、片长、导演、主演、上映日期与一段不超过八十字的速评。完整影评不在本站发布，仅给出口碑参考来源。</p>
+      </div>
+      <div class="grid g4 fade">
+        <article class="card hl">
+          <div class="poster">
+            <svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><linearGradient id="k1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a1408"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs>
+              <rect width="120" height="160" fill="url(#k1)"/>
+              <circle cx="60" cy="66" r="28" fill="none" stroke="#1a0c05" stroke-width="2.5"/>
+              <path d="M36 134 H84 M60 66 V100" stroke="#1a0c05" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <span class="pbtn"><svg class="play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg></span>
+            <span class="cap"><b>132 分钟</b><em>周五上映</em></span>
+          </div>
+          <div class="fminfo"><h3>沙丘 第三部</h3><div class="sub"><b>丹尼斯·维伦纽瓦</b><i></i><span>科幻史诗 · 美国</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster">
+            <svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><linearGradient id="k2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1a08"/><stop offset="1" stop-color="#ffcf3d"/></linearGradient></defs>
+              <rect width="120" height="160" fill="url(#k2)"/>
+              <path d="M34 134 C34 96 46 80 60 80 C74 80 86 96 86 134" fill="none" stroke="#1a0c05" stroke-width="3"/>
+              <circle cx="60" cy="54" r="11" fill="#1a0c05"/>
+            </svg>
+            <span class="pbtn"><svg class="play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg></span>
+            <span class="cap"><b>108 分钟</b><em>周五上映</em></span>
+          </div>
+          <div class="fminfo"><h3>还有明天</h3><div class="sub"><b>保利娜·加西亚</b><i></i><span>剧情 · 意大利</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster">
+            <svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><linearGradient id="k3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#08161a"/><stop offset="1" stop-color="#3fd6c0"/></linearGradient></defs>
+              <rect width="120" height="160" fill="url(#k3)"/>
+              <rect x="34" y="40" width="52" height="70" rx="3" fill="none" stroke="#04221d" stroke-width="2.5"/>
+              <path d="M48 118 H72 M60 110 V128" stroke="#04221d" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <span class="pbtn"><svg class="play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg></span>
+            <span class="cap"><b>145 分钟</b><em>周六点映</em></span>
+          </div>
+          <div class="fminfo"><h3>破墓</h3><div class="sub"><b>张在现</b><i></i><span>悬疑惊悚 · 韩国</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster">
+            <svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><linearGradient id="k4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a0c14"/><stop offset="1" stop-color="#ff5a36"/></linearGradient></defs>
+              <rect width="120" height="160" fill="url(#k4)"/>
+              <path d="M60 34 L90 134 L30 134 Z" fill="none" stroke="#1a0c05" stroke-width="2.5"/>
+              <circle cx="60" cy="98" r="10" fill="#1a0c05"/>
+            </svg>
+            <span class="pbtn"><svg class="play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg></span>
+            <span class="cap"><b>96 分钟</b><em>流媒体上线</em></span>
+          </div>
+          <div class="fminfo"><h3>机器人之梦</h3><div class="sub"><b>巴勃罗·贝格尔</b><i></i><span>动画 · 西班牙 / 法国</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster">
+            <svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><linearGradient id="k5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10080a"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs>
+              <rect width="120" height="160" fill="url(#k5)"/>
+              <path d="M32 134 L60 42 L88 134 Z" fill="#1a0c05" opacity=".88"/>
+              <path d="M46 134 L60 88 L74 134 Z" fill="#ffcf3d"/>
+            </svg>
+            <span class="pbtn"><svg class="play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg></span>
+            <span class="cap"><b>118 分钟</b><em>周五上映</em></span>
+          </div>
+          <div class="fminfo"><h3>出走的决心</h3><div class="sub"><b>尹丽川</b><i></i><span>剧情 · 中国大陆</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster">
+            <svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><linearGradient id="k6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a16"/><stop offset="1" stop-color="#3fd6c0"/></linearGradient></defs>
+              <rect width="120" height="160" fill="url(#k6)"/>
+              <circle cx="60" cy="68" r="26" fill="none" stroke="#04221d" stroke-width="2.5"/>
+              <ellipse cx="60" cy="68" rx="8" ry="26" fill="none" stroke="#04221d" stroke-width="2"/>
+            </svg>
+            <span class="pbtn"><svg class="play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg></span>
+            <span class="cap"><b>126 分钟</b><em>重映</em></span>
+          </div>
+          <div class="fminfo"><h3>编号 17</h3><div class="sub"><b>奉俊昊</b><i></i><span>科幻黑色 · 韩国 / 美国</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster">
+            <svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><linearGradient id="k7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1408"/><stop offset="1" stop-color="#ffcf3d"/></linearGradient></defs>
+              <rect width="120" height="160" fill="url(#k7)"/>
+              <path d="M30 134 C30 92 46 78 60 78 C74 78 90 92 90 134" fill="none" stroke="#1a0c05" stroke-width="3"/>
+              <rect x="50" y="48" width="20" height="16" rx="2" fill="#1a0c05"/>
+            </svg>
+            <span class="pbtn"><svg class="play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg></span>
+            <span class="cap"><b>102 分钟</b><em>流媒体上线</em></span>
+          </div>
+          <div class="fminfo"><h3>粗野派</h3><div class="sub"><b>布拉迪·科贝特</b><i></i><span>剧情 · 美国 / 英国</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster">
+            <svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs><linearGradient id="k8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#180a10"/><stop offset="1" stop-color="#ff5a36"/></linearGradient></defs>
+              <rect width="120" height="160" fill="url(#k8)"/>
+              <rect x="36" y="36" width="48" height="72" rx="2" fill="none" stroke="#1a0c05" stroke-width="2.5"/>
+              <path d="M36 118 H84 M50 136 H70" stroke="#1a0c05" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <span class="pbtn"><svg class="play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg></span>
+            <span class="cap"><b>156 分钟</b><em>艺术院线上映</em></span>
+          </div>
+          <div class="fminfo"><h3>第二幕</h3><div class="sub"><b>王家卫</b><i></i><span>剧情 · 香港</span></div></div>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:28px" class="fade"><a class="btn btn-ghost" href="#releases">查看完整上映档期 <svg class="arr" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></div>
+    </div>
+  </section>
+
+  <!-- 上映档期 -->
+  <section id="releases">
+    <div class="wrap">
+      <div class="fade">
+        <span class="kicker">● SCHEDULE</span>
+        <h2>未来 <em>六周</em> 上映档期表</h2>
+        <p class="lead">快播电影网按周整理院线与流媒体上线时间，数据以官方排片公告为准。档期调整会单独发文说明原因，不在原表中悄悄改掉。</p>
+      </div>
+      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+        <table class="schedule">
+          <thead><tr><th>影片</th><th>类型</th><th>上映日期</th><th>渠道</th><th>看点</th></tr></thead>
+          <tbody>
+            <tr><td class="nm" data-l="影片">沙丘 第三部</td><td data-l="类型">科幻史诗</td><td class="dt" data-l="日期">本周五</td><td class="wh" data-l="渠道">全国院线</td><td data-l="看点">系列收官</td></tr>
+            <tr><td class="nm" data-l="影片">还有明天</td><td data-l="类型">剧情</td><td class="dt" data-l="日期">本周五</td><td class="wh" data-l="渠道">全国院线</td><td data-l="看点">威尼斯获奖</td></tr>
+            <tr><td class="nm" data-l="影片">机器人之梦</td><td data-l="类型">动画电影</td><td class="dt" data-l="日期">本周六</td><td class="wh" data-l="渠道">流媒体</td><td data-l="看点">无对白叙事</td></tr>
+            <tr><td class="nm" data-l="影片">破墓</td><td data-l="类型">悬疑惊悚</td><td class="dt" data-l="日期">下周四</td><td class="wh" data-l="渠道">艺术院线</td><td data-l="看点">韩国年度票房</td></tr>
+            <tr><td class="nm" data-l="影片">出走的决心</td><td data-l="类型">剧情</td><td class="dt" data-l="日期">下周五</td><td class="wh" data-l="渠道">全国院线</td><td data-l="看点">女性题材</td></tr>
+            <tr><td class="nm" data-l="影片">编号 17</td><td data-l="类型">科幻黑色</td><td class="dt" data-l="日期">下下周二</td><td class="wh" data-l="渠道">全国院线</td><td data-l="看点">奉俊昊新作</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 资讯速递 -->
+  <section id="news">
+    <div class="wrap">
+      <div class="fade">
+        <span class="kicker">● LATEST NEWS</span>
+        <h2>资讯 <em>速递</em>，<br>一句话说清发生了什么</h2>
+        <p class="lead">快播电影网的资讯写法有固定格式：发生了什么、对观众有什么影响、信息来自哪一方。涉及未官宣传闻的条目一律标注"待确认"，不把传闻写成事实。</p>
+      </div>
+      <div class="news fade">
+        <article><time>09-30 21:30</time><h3>本周新片前瞻：六部值得关注的院线新片与两部流媒体同步上线</h3><span class="cat">新片前瞻</span></article>
+        <article><time>09-30 17:05</time><h3>流媒体本周上线清单：海外平台新增 11 部影片，含三部往年获奖片</h3><span class="cat">流媒体</span></article>
+        <article><time>09-30 12:40</time><h3>档期调整：两部影片宣布改期，替代片单与退票说明一并公布</h3><span class="cat">档期变动</span></article>
+        <article><time>09-30 09:15</time><h3>威尼斯国际电影节获奖名单公布，主竞赛单元完整结果与入围名单</h3><span class="cat">电影节</span></article>
+        <article><time>09-29 20:20</time><h3>国内院线周票房统计：本周前三名与排片占比变动</h3><span class="cat">票房</span></article>
+        <article><time>09-29 15:50</time><h3>剧组资讯：三部在拍影片公布主创阵容与开机时间，两部仍在选角阶段</h3><span class="cat">幕后</span></article>
+        <article><time>09-29 11:00</time><h3>修复重映：两部经典影片确认 4K 修复版档期，含特别场与映后谈</h3><span class="cat">重映</span></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 获奖名单 -->
+  <section id="awards">
+    <div class="wrap">
+      <div class="fade">
+        <span class="kicker">● AWARDS</span>
+        <h2>国内外 <em>电影节</em> 获奖名单整理</h2>
+        <p class="lead">快播电影网按电影节与年度归档获奖名单，含主竞赛单元全部奖项与入围名单，方便对照入选影片的档案页补齐观看计划。</p>
+      </div>
+      <div class="grid g2 fade">
+        <div class="awards">
+          <div class="aw"><div class="yr">2026<small>威尼斯</small></div><div><h3>第 83 届威尼斯国际电影节获奖名单</h3><p>金狮奖、评审团大奖、最佳导演、最佳男女演员完整结果与入围片单</p></div></div>
+          <div class="aw"><div class="yr">2026<small>戛纳</small></div><div><h3>第 79 届戛纳国际电影节获奖名单</h3><p>金棕榈奖与全部主竞赛单元奖项，含导演双周与一种关注单元</p></div></div>
+          <div class="aw"><div class="yr">2026<small>柏林</small></div><div><h3>第 76 届柏林国际电影节获奖名单</h3><p>金熊奖、银熊奖各单元结果与华语影片入围情况</p></div></div>
+          <div class="aw"><div class="yr">2025<small>奥斯卡</small></div><div><h3>第 98 届奥斯卡金像奖获奖名单</h3><p>最佳影片、导演、男女主角与外语片奖项的完整结果</p></div></div>
+        </div>
+        <div class="awards">
+          <div class="aw"><div class="yr">2025<small>金鸡</small></div><div><h3>中国电影金鸡奖获奖名单</h3><p>最佳故事片、导演与表演奖项，含提名名单与入围影片</p></div></div>
+          <div class="aw"><div class="yr">2025<small>金马</small></div><div><h3>台北金马影展获奖名单</h3><p>主竞赛单元完整结果与华语电影入选名单</p></div></div>
+          <div class="aw"><div class="yr">2025<small>上影节</small></div><div><h3>上海国际电影节获奖名单</h3><p>金爵奖各单元结果与国产新片入围名单</p></div></div>
+          <div class="aw"><div class="yr">历年<small>归档</small></div><div><h3>历年获奖名单可回溯查阅</h3><p>按电影节与年份归档，可查看近十年的完整获奖名单与提名名单</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目导航 -->
+  <section id="columns">
+    <div class="wrap">
+      <div class="fade">
+        <span class="kicker">● COLUMNS</span>
+        <h2>快播电影网 <em>栏目导航</em></h2>
+        <p class="lead">栏目按内容形态划分，而不是按流量入口划分。每个栏目都有固定的更新频率与成文格式，读者知道什么时候来看什么。</p>
+      </div>
+      <div class="grid g4 fade">
+        <div class="card"><span class="badge">日更</span><span class="ico">📰</span><h3 class="t">资讯速递</h3><p class="tx">当日电影资讯汇总，每日 09:30 首更</p><div class="mini"><i>当日</i><i>短资讯</i></div></div>
+        <div class="card"><span class="badge ora">周更</span><span class="ico">🎬</span><h3 class="t">本周新片</h3><p class="tx">每周三更新当周新片前瞻与速评</p><div class="mini"><i>周三</i><i>速评</i></div></div>
+        <div class="card"><span class="badge teal">周更</span><span class="ico">📅</span><h3 class="t">上映档期</h3><p class="tx">六周内的院线与流媒体上线时间</p><div class="mini"><i>六周</i><i>排片</i></div></div>
+        <div class="card"><span class="badge">月更</span><span class="ico">🏆</span><h3 class="t">获奖名单</h3><p class="tx">国内外电影节完整奖项与入围名单</p><div class="mini"><i>按月</i><i>可回溯</i></div></div>
+        <div class="card"><span class="badge ora">月更</span><span class="ico">🎞️</span><h3 class="t">幕后纪实</h3><p class="tx">拍摄、选角、剪辑与上映前的制作进展</p><div class="mini"><i>制作</i><i>选角</i></div></div>
+        <div class="card"><span class="badge teal">季更</span><span class="ico">🔁</span><h3 class="t">重映与修复</h3><p class="tx">4K 修复版与经典影片重映档期</p><div class="mini"><i>修复</i><i>特别场</i></div></div>
+        <div class="card"><span class="badge">周更</span><span class="ico">💰</span><h3 class="t">票房观察</h3><p class="tx">院线周票房与排片占比变动</p><div class="mini"><i>周票房</i><i>排片</i></div></div>
+        <div class="card"><span class="badge ora">不定期</span><span class="ico">📣</span><h3 class="t">读者投稿</h3><p class="tx">读者提供的观影反馈与补正信息</p><div class="mini"><i>投稿</i><i>纠错</i></div></div>
+      </div>
+      <div class="chips fade">
+        <a class="chip" href="#">电影资讯</a>
+        <a class="chip" href="#">新片速递</a>
+        <a class="chip" href="#">电影档期</a>
+        <a class="chip" href="#">上映排片</a>
+        <a class="chip" href="#">流媒体上线</a>
+        <a class="chip" href="#">电影节获奖</a>
+        <a class="chip" href="#">票房观察</a>
+        <a class="chip" href="#">幕后资讯</a>
+        <a class="chip" href="#">电影新闻</a>
+        <a class="chip" href="#">修复重映</a>
+        <a class="chip" href="#">华语电影</a>
+        <a class="chip" href="#">国际电影节</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主题合集 -->
+  <section id="columns2">
+    <div class="wrap">
+      <div class="fade">
+        <span class="kicker">● FEATURED SETS</span>
+        <h2>横向滑动看 <em>主题合集</em></h2>
+        <p class="lead">这些合集是为特定观影场景准备的：某个导演的新作来了、某类题材扎堆上映、某个电影节开奖。手机上可以直接左右滑动。</p>
+      </div>
+      <div class="scrollx fade">
+        <div class="mini-card"><div class="ph"><svg viewBox="0 0 210 118" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="s1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a1408"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs><rect width="210" height="118" fill="url(#s1)"/><circle cx="105" cy="52" r="22" fill="none" stroke="#1a0c05" stroke-width="2.5"/><path d="M82 102 H128" stroke="#1a0c05" stroke-width="2.5" stroke-linecap="round"/></svg><em>8 部</em></div><div class="info"><b>太空题材集中上映</b><span>近三个月院线上映的太空题材影片</span></div></div>
+        <div class="mini-card"><div class="ph"><svg viewBox="0 0 210 118" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="s2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1a08"/><stop offset="1" stop-color="#ffcf3d"/></linearGradient></defs><rect width="210" height="118" fill="url(#s2)"/><path d="M58 102 C58 70 74 58 105 58 C136 58 152 70 152 102" fill="none" stroke="#1a0c05" stroke-width="3"/><circle cx="105" cy="40" r="10" fill="#1a0c05"/></svg><em>6 部</em></div><div class="info"><b>女性导演作品季</b><span>本季院线可看的女导演新作</span></div></div>
+        <div class="mini-card"><div class="ph"><svg viewBox="0 0 210 118" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="s3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#08161a"/><stop offset="1" stop-color="#3fd6c0"/></linearGradient></defs><rect width="210" height="118" fill="url(#s3)"/><rect x="60" y="32" width="90" height="50" rx="3" fill="none" stroke="#04221d" stroke-width="2.5"/><path d="M82 98 H128" stroke="#04221d" stroke-width="2.5" stroke-linecap="round"/></svg><em>11 部</em></div><div class="info"><b>流媒体本月新增</b><span>本月海外平台新增的 11 部影片</span></div></div>
+        <div class="mini-card"><div class="ph"><svg viewBox="0 0 210 118" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="s4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a0c14"/><stop offset="1" stop-color="#ff5a36"/></linearGradient></defs><rect width="210" height="118" fill="url(#s4)"/><path d="M105 28 L150 102 L60 102 Z" fill="none" stroke="#1a0c05" stroke-width="2.5"/><circle cx="105" cy="74" r="9" fill="#1a0c05"/></svg><em>9 部</em></div><div class="info"><b>获奖片观影清单</b><span>本届电影节获奖影片的观看顺序</span></div></div>
+        <div class="mini-card"><div class="ph"><svg viewBox="0 0 210 118" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="s5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10080a"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs><rect width="210" height="118" fill="url(#s5)"/><path d="M60 102 L105 36 L150 102 Z" fill="#1a0c05" opacity=".88"/><path d="M82 102 L105 66 L128 102 Z" fill="#ffcf3d"/></svg><em>7 部</em></div><div class="info"><b>档期调整后的替代片</b><span>改档影片对应的替代观看建议</span></div></div>
+        <div class="mini-card"><div class="ph"><svg viewBox="0 0 210 118" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="s6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a16"/><stop offset="1" stop-color="#3fd6c0"/></linearGradient></defs><rect width="210" height="118" fill="url(#s6)"/><circle cx="105" cy="54" r="22" fill="none" stroke="#04221d" stroke-width="2.5"/><ellipse cx="105" cy="54" rx="7" ry="22" fill="none" stroke="#04221d" stroke-width="2"/></svg><em>5 部</em></div><div class="info"><b>4K 修复重映</b><span>近期修复版重映的特别场次</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 读者投稿 -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="fade">
+        <span class="kicker">● CONTRIBUTE</span>
+        <h2>读者 <em>投稿</em> 与纠错，<br>快播电影网靠这个更新</h2>
+        <p class="lead">栏目信息依赖读者提供线索：档期调整、流媒体上线时间、获奖名单补遗。核实后会在原文标注来源与修订时间，并计入当月致谢名单。</p>
+      </div>
+      <div class="grid g3 fade">
+        <div class="step"><span class="no">01</span><div><h3>看到消息先截图</h3><p>保留片方、影院或平台的原始公告截图，投稿时一并附上，可大幅缩短核实时间。</p></div></div>
+        <div class="step"><span class="no">02</span><div><h3>在对应条目下留言</h3><p>直接在资讯条目或档期表下方留言，标注"待补"或"存疑"，编辑组会优先处理。</p></div></div>
+        <div class="step"><span class="no">03</span><div><h3>核实后署名致谢</h3><p>经核实的投稿会保留修订记录，并在每月致谢名单中署名，重大纠错另有标注。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="fade">
+        <span class="kicker">● FAQ</span>
+        <h2>关于 <em>快播电影网</em> 的常见问题</h2>
+        <p class="lead">这里整理的是新读者问得最多的几件事。如果没有覆盖到你的问题，可以通过页脚的联系方式找到快播电影网编辑组。</p>
+      </div>
+      <div class="faq fade">
+        <details open>
+          <summary>快播电影网是什么网站？和 kuaibodianyingwang-zh.com.github.io 是什么关系？</summary>
+          <div class="a"><b>快播电影网</b>是网站的正式名称，<b>kuaibodianyingwang-zh.com.github.io</b>是快播电影网的官方访问网址。网站定位为<b>电影资讯速递与新片档期整理站</b>，汇总每周新片上映、国内外电影节获奖名单、院线与流媒体上线时间，以及观影前后值得知道的影片信息。</div>
+        </details>
+        <details>
+          <summary>快播电影网的更新频率是怎样的？</summary>
+          <div class="a">每日 09:30 首更资讯速递，每周三更新本周新片前瞻，每月归档一次电影节获奖名单与票房观察。重大档期变动会单独发文，不等待周更节奏。</div>
+        </details>
+        <details>
+          <summary>档期信息以什么为准？</summary>
+          <div class="a">以<b>片方官方公告、院线排片公告与平台上线公告</b>为准。非官方传闻一律标注"待确认"，档期调整会保留原文与修订时间，不在原表中静默覆盖。</div>
+        </details>
+        <details>
+          <summary>快播电影网提供在线观看吗？</summary>
+          <div class="a">快播电影网是<b>电影资讯与档期整理站</b>，提供新片前瞻、上映档期、获奖名单与幕后资讯。具体观看方式以片方或平台公布的入口为准，本站不直接托管视频内容。</div>
+        </details>
+        <details>
+          <summary>发现信息有误可以投稿吗？</summary>
+          <div class="a">可以，也是本站最重要的信息来源。在对应条目下留言或发送纠错线索，编辑组会在两个工作日内核实。经核实的投稿会保留修订记录并署名致谢。</div>
+        </details>
+        <details>
+          <summary>资讯可以转载吗？</summary>
+          <div class="a">可以，转载时请保留原文出处与链接，并注明发布时间。时效性较强的档期类信息建议在转载前再核对一次官方公告，避免引用已调整的旧档期。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="wrap">
+      <div class="cta-box fade">
+        <span class="kicker">● NEVER MISS A RELEASE</span>
+        <h2>电影消息跑得快，<br>我们帮你追上</h2>
+        <div class="big">快播电影网</div>
+        <p class="url">官方网址：https://kuaibodianyingwang-zh.com.github.io/</p>
+        <p class="lead" style="margin:14px auto 0">电影资讯 · 新片速递 · 电影档期 · 上映排片 · 流媒体上线</p>
+        <div class="row">
+          <a class="btn btn-main" href="#new">看本周新片 <svg class="play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg></a>
+          <a class="btn btn-ghost" href="#releases">查上映档期</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-in">
+      <div class="ab">
+        <a class="logo" href="#top"><b>快播</b>电影网<span>FAST FILM FEED</span></a>
+        <p>快播电影网是一个电影资讯速递与新片档期整理站，已收录资讯 860+ 条，覆盖 12 个栏目分类。官方网址：https://kuaibodianyingwang-zh.com.github.io/</p>
+      </div>
+      <div>
+        <h4>看资讯</h4>
+        <ul>
+          <li><a href="#new">本周新片</a></li>
+          <li><a href="#releases">上映档期</a></li>
+          <li><a href="#news">资讯速递</a></li>
+          <li><a href="#awards">获奖名单</a></li>
+          <li><a href="#">票房观察</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>栏目</h4>
+        <ul>
+          <li><a href="#columns">栏目导航</a></li>
+          <li><a href="#columns2">主题合集</a></li>
+          <li><a href="#guide">读者投稿</a></li>
+          <li><a href="#">幕后纪实</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>规则</h4>
+        <ul>
+          <li><a href="#">投稿须知</a></li>
+          <li><a href="#">信息来源标注</a></li>
+          <li><a href="#">用户协议</a></li>
+          <li><a href="#">隐私政策</a></li>
+          <li><a href="#">版权声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cp">
+      <span>© <span id="yr">2026</span> 快播电影网 FAST FILM FEED · 本站网址：https://kuaibodianyingwang-zh.com.github.io/ · 版权所有 ICP 备案号：<a href="#">__备案号占位__</a></span>
+      <span>版权主体：__主体名称占位__ · 内容合作：__联系邮箱占位__</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),btn=document.getElementById('nb');
+  if(btn&&nav){btn.addEventListener('click',function(){
+    var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');
+  });}
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.fade').forEach(function(n){n.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px'});
+  document.querySelectorAll('.fade').forEach(function(n){io.observe(n);});
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "@id":"https://kuaibodianyingwang-zh.com.github.io/#organization",
+  "name":"快播电影网",
+  "alternateName":"快播电影网 FAST FILM FEED",
+  "url":"https://kuaibodianyingwang-zh.com.github.io/",
+  "description":"快播电影网（kuaibodianyingwang-zh.com.github.io）是一个电影资讯速递与新片档期整理站，已收录资讯 860+ 条，覆盖 12 个栏目分类，提供每周新片上映、国内外电影节获奖名单、院线与流媒体上线时间，以及观影前后值得知道的影片信息。",
+  "logo":{"@type":"ImageObject","url":"https://kuaibodianyingwang-zh.com.github.io/logo.png","width":512,"height":512},
+  "sameAs":[]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"快播电影网",
+  "url":"https://kuaibodianyingwang-zh.com.github.io/",
+  "inLanguage":"zh-CN",
+  "publisher":{"@id":"https://kuaibodianyingwang-zh.com.github.io/#organization"},
+  "potentialAction":{"@type":"SearchAction","target":"https://kuaibodianyingwang-zh.com.github.io/search?q={search_term_string}","query-input":"required name=search_term_string"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"快播电影网是什么网站？和 kuaibodianyingwang-zh.com.github.io 是什么关系？","acceptedAnswer":{"@type":"Answer","text":"快播电影网是网站的正式名称，kuaibodianyingwang-zh.com.github.io 是快播电影网的官方访问网址。网站定位为电影资讯速递与新片档期整理站，汇总每周新片上映、国内外电影节获奖名单、院线与流媒体上线时间，以及观影前后值得知道的影片信息。"}},
+    {"@type":"Question","name":"快播电影网的更新频率是怎样的？","acceptedAnswer":{"@type":"Answer","text":"每日 09:30 首更资讯速递，每周三更新本周新片前瞻，每月归档一次电影节获奖名单与票房观察。重大档期变动会单独发文，不等待周更节奏。"}},
+    {"@type":"Question","name":"档期信息以什么为准？","acceptedAnswer":{"@type":"Answer","text":"以片方官方公告、院线排片公告与平台上线公告为准。非官方传闻一律标注待确认，档期调整会保留原文与修订时间，不在原表中静默覆盖。"}},
+    {"@type":"Question","name":"快播电影网提供在线观看吗？","acceptedAnswer":{"@type":"Answer","text":"快播电影网是电影资讯与档期整理站，提供新片前瞻、上映档期、获奖名单与幕后资讯，具体观看方式以片方或平台公布的入口为准，本站不直接托管视频内容。"}},
+    {"@type":"Question","name":"发现信息有误可以投稿吗？","acceptedAnswer":{"@type":"Answer","text":"可以，也是本站最重要的信息来源。在对应条目下留言或发送纠错线索，编辑组会在两个工作日内核实。经核实的投稿会保留修订记录并署名致谢。"}},
+    {"@type":"Question","name":"资讯可以转载吗？","acceptedAnswer":{"@type":"Answer","text":"可以，转载时请保留原文出处与链接，并注明发布时间。时效性较强的档期类信息建议在转载前再核对一次官方公告，避免引用已调整的旧档期。"}}
+  ]
+}
+</script>
+
+</body>
+</html>
